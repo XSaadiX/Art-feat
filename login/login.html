@@ -6,7 +6,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
       name="viewport"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="Images/fave.svg" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
@@ -39,11 +39,9 @@
               </div>
               <div class="field input-field">
                 <input
-                  type="password"
-                  placeholder="password"
-                  class="password-input"
+                type="password" placeholder="Password" class="password-input" id="password"
                 />
-                <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
+                <div class="eye-btn" id="togglePassword"><i id="eyeIcon" class="fas fa-eye"></i></div>
               </div>
               <div class="field button-field">
                 <a>Forgot password?</a>
@@ -82,6 +80,50 @@
         <img src="../assets/signupArtdeat.svg" />
       </div>
     </div>
+    <style>
+      .field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Space for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.eye-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    padding-top: 25px;
+}
+
+.eye-btn i {
+    font-size: 18px;
+}
+    </style>
+    <script>
+      // script.js
+document.getElementById('togglePassword').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    // Toggle the type attribute using getAttribute() and setAttribute()
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+
+    // Toggle the eye slash icon
+    eyeIcon.classList.toggle('fa-eye-slash');
+});
+
+    </script>
   </body>
   <script
   src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

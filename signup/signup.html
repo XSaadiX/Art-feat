@@ -6,7 +6,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
       name="viewport"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="Images/fave.svg" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
@@ -49,28 +49,19 @@
             <form action="#">
               <div class="field input-field">
                 <input type="email" placeholder="Email" class="input" />
-              </div>
-              <div class="field input-field">
-                <input
-                  type="password"
-                  placeholder="password"
-                  class="password-input"
-                />
-                <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
-              </div>
-              <div class="field input-field">
-                <input
-                  type="password"
-                  placeholder="Confirm password"
-                  class="password-input2"
-                />
-                <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
-                <i class="bx bx-hide eye-icon"></i>
-              </div>
-              <div class="field button-field">
+            </div>
+            <div class="field input-field">
+                <input type="password" placeholder="Password" class="password-input" id="password">
+                <div class="eye-btn" id="togglePassword"><i id="eyeIcon" class="fas fa-eye"></i></div>
+            </div>
+            <div class="field input-field">
+                <input type="password" placeholder="Confirm Password" class="password-input2" id="confirmPassword">
+                <div class="eye-btn" id="toggleConfirmPassword"><i id="confirmEyeIcon" class="fas fa-eye"></i></div>
+            </div>
+            <div class="field button-field">
                 <a>Forgot password?</a>
                 <button>Signup</button>
-              </div>
+            </div>
             </form>
 
             <div class="form-link">
@@ -87,6 +78,66 @@
         <img src="../assets/signinArt.svg" />
       </div>
     </div>
+
+    <style>
+      /* styles.css */
+      .field {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* Space for the icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.eye-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    padding-top: 25px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.eye-btn i {
+    font-size: 18px;
+}
+
+    </style>
+
+    <script>
+     // script.js
+document.getElementById('togglePassword').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    // Toggle the type attribute using getAttribute() and setAttribute()
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+
+    // Toggle the eye slash icon
+    eyeIcon.classList.toggle('fa-eye-slash');
+});
+
+document.getElementById('toggleConfirmPassword').addEventListener('click', function () {
+    const confirmPasswordField = document.getElementById('confirmPassword');
+    const confirmEyeIcon = document.getElementById('confirmEyeIcon');
+
+    // Toggle the type attribute using getAttribute() and setAttribute()
+    const type = confirmPasswordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    confirmPasswordField.setAttribute('type', type);
+
+    // Toggle the eye slash icon
+    confirmEyeIcon.classList.toggle('fa-eye-slash');
+});
+
+    </script>
   </body>
 </html>
 <script src="/js/script.js"></script>
