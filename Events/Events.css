@@ -1,0 +1,16 @@
+.c-item{
+    height: 590px;
+    width: 100%;
+}
+
+.c-img{
+    height: 100%;
+}
+
+.event-pic{
+    border-radius: 50px;
+}
+
+.second-event{
+    background-color: rgb(197, 227, 227);
+}

@@ -1,0 +1,38 @@
+.c-item{
+    height: 590px;
+    width: 100%;
+}
+
+.c-img{
+    height: 100%;
+}
+
+.event-pic{
+    border-radius: 50px;
+}
+
+
+.first{
+    background-color:rgb(0, 0, 0);
+    color: rgb(245, 245, 245);
+}
+.second-event{
+    background-color: rgb(247, 247, 247);
+    color: rgb(0, 0, 0);
+}
+
+.third{
+    background-color: rgb(0, 164, 0);
+    color: rgb(255, 255, 255);
+}
+.green{
+    color: green;
+}
+
+.coursal1-text{
+    color: white;
+}
+
+.slide-img{
+    opacity: 100%;
+}
