@@ -677,22 +677,7 @@ input.cancel {
   border-radius: 2px;
   border: 1px solid #adadad;
 }
-.imagesSection .outerImg .delete {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
-  border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(0, 0, 0, 0.6);
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  justify-content: center;
-  z-index: 2;
-}
-.imagesSection .outerImg .delete img {
-  margin-top: -4px;
-}
+
 /*Media Queries
 =========================*/
 @media only screen and (max-width: 1200px) {

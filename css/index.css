@@ -361,6 +361,7 @@ nav input[type="checkbox"] {
   display: inline;
 } 
 
+/*  */
 
 .supportArtist{
   height: 50px;
@@ -372,21 +373,16 @@ nav input[type="checkbox"] {
   top: 148px;
   z-index: 100;
   cursor: pointer;
-  transition: 500ms;
-  
-  
+  transition: width 1.5s ease, background-color 1.5s ease, padding 1.5s ease, opacity 1.5s ease; /* Adjusted transition duration */
 }
 
-.supportArtist:hover{
-  transition: all 0.8s ease;
-  
+.supportArtist:hover {
   height: 50px;
   width: auto;
   background-color: #0c0221;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* top: 100px; */
   padding-left: 10px;
   padding-right: 10px;
   opacity: 80%;
@@ -576,11 +572,38 @@ nav input[type="checkbox"] {
   padding: 30px 0px;
   position: relative;
 }
+
+/* For small screens */
+@media (max-width: 576px) {
+  .outer .art {
+    position: relative;
+    left: 60px; /* Adjusts the position for small screens */
+  }
+}
+
+/* For medium screens */
+@media (min-width: 576px) and (max-width: 768px) {
+  .outer .art {
+    position: relative;
+    left: 100px; /* Adjusts the position for medium screens */
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 768px) {
+  .outer .art {
+    position: relative;
+    left: 50px; /* Adjusts the position for screens larger than 768px */
+  }
+}
+
+
 .ArtistSection .outer {
   width: 90%;
-  margin: auto;
+ 
 }
-.ArtistSection .buttonss {
+
+/* .ArtistSection .buttonss {
   position: absolute;
   bottom: 43%;
   display: flex;
@@ -588,11 +611,11 @@ nav input[type="checkbox"] {
   justify-content: space-between;
   width: 95%;
   z-index: 10;
-}
-.ArtistSection .buttonss a {
+} */
+/* .ArtistSection .buttonss a {
   border-radius: 25px !important;
   background: #d9d9d9 !important;
-}
+} */
 .ArtistSection .outer .text-right {
   display: flex;
   gap: 8px;
@@ -653,6 +676,91 @@ nav input[type="checkbox"] {
 }
 .outerCard .footerBtn button:hover {
   background: var(--secondary-color);
+}
+/* Main styles for paintingSection */
+.paintingSection {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.5) 5.5%,
+    #daf3ff 52.75%,
+    rgba(249, 248, 248, 0) 100%
+  );
+  padding: 30px 0px;
+  position: relative;
+}
+.paintingSection .buttonss {
+  position: absolute;
+  bottom: 43%;
+  display: flex;
+  left: 20px;
+  justify-content: space-between;
+  width: 95%;
+  z-index: 10;
+}
+.paintingSection .buttonss a {
+  border-radius: 25px !important;
+  background: #d9d9d9 !important;
+}
+.paintingSection .outer {
+  width: 90%;
+  margin: auto;
+}
+.paintingSection .outer .text-right {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+}
+.paintingSection .carousel-inner {
+  padding: 20px 0px !important;
+}
+
+/* Make it responsive */
+@media (max-width: 1200px) {
+  .carousel .outerCard {
+    width: 90%; /* Reduce the width of the cards */
+  }
+}
+
+@media (max-width: 992px) {
+  .carousel .outerCard {
+    width: 100%; /* Make the cards take full width on smaller screens */
+  }
+  .paintingSection .buttonss {
+    bottom: 10%;
+    width: 100%;
+  }
+  .paintingSection .buttonss a {
+    background: #00a5f2 !important;
+  }
+  .paintingSection .carousel-inner {
+    padding: 10px 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel .outerCard {
+    width: 100%; /* Make the cards take full width on smaller screens */
+  }
+  .paintingSection .buttonss {
+    bottom: 5%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel .outerCard {
+    width: 100%; /* Make the cards take full width on smaller screens */
+  }
+  .paintingSection .buttonss {
+    bottom: 2%;
+    width: 100%;
+  }
+  .paintingSection .buttonss a {
+    background: #00a5f2 !important;
+  }
+  .paintingSection .carousel-inner {
+    padding: 5px 0px !important;
+  }
 }
 .ArtistCard {
   padding: 16px;
@@ -829,6 +937,7 @@ nav input[type="checkbox"] {
   }
 }
 
+
 .carousel-indicators {
   bottom: -70px !important;
 }
@@ -961,14 +1070,14 @@ nav input[type="checkbox"] {
 .Creators .inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 69px;
+  gap: 50px;
   align-items: center;
   justify-content: center;
 }
 .Creators .inner .info h1 {
   color: var(--secondary-color);
   font-size: 35px;
-  font-weight: 700;
+  font-weight: bold;
 }
 .Creators .inner .info button {
   width: 194px;
@@ -979,8 +1088,10 @@ nav input[type="checkbox"] {
   font-weight: 600;
   margin-top: 25px;
   transition: 500ms;
-  border-radius: 8px;
+ 
   background: transparent;
+  color: #ffffff;
+  background-color: #ff00c6;
 }
 .Creators .inner .info button:hover {
   background: var(--secondary-color);
@@ -992,7 +1103,7 @@ nav input[type="checkbox"] {
   cursor: pointer;
   display: flex;
   position: relative;
-  color: #ff00c6;
+  color: #ffffff;
   transition: 500ms;
   height: 100%;
   align-items: center;
@@ -3706,9 +3817,9 @@ nav input[type="checkbox"] {
   width: 150px;
   height: 150px;
 } */
-/* .event-div{
-  width: 480px;
-} */
+.event-div{
+  gap: 40px;
+}
 
   .card:hover {
     /* Add your hover styles here */

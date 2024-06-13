@@ -16,7 +16,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
       name="viewport"
     />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image/x-icon" href="/Images/fave.svg" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
@@ -61,13 +61,21 @@
         <div class="innerContent">
           <div class="line"></div>
           <button>
-            <img src="/assets/Heart (1).svg"/>
+            <style>
+              .hoverE:hover{
+                background-color: aqua;
+                border-radius: 30px;
+                padding: 5px;
+                transition: ease-out 50ms;
+              }
+            </style>
+            <img src="/assets/Heart (1).svg" class="hoverE" />
           </button>
           <button>
-            <img src="/assets/Profile.svg"/>
+            <img src="/assets/Profile.svg" class="hoverE"/>
           </button>
           <button>
-            <img src="/assets/Cart.svg"/>
+            <img src="/assets/Cart.svg" class="hoverE"/>
           </button>
           
           <select name="language" id="language">
@@ -188,7 +196,87 @@
                 >
                   <div class="flexbin flexbin-margin">
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?man" />
+                      <!-- edit -->
+                      <style>
+                        .editIcon{
+                           width: 30px;
+                           height: 25px;
+                  border-radius: 100px;
+                  position: absolute;
+                  z-index: 1;
+                  top: 5px;
+                  right: 11px;
+                  border: 1px solid rgba(255, 255, 255, 0.4);
+                  background: rgba(0, 0, 0, 0.6);
+                  
+                  justify-content: center;
+                   align-items: center;
+                   color: #ccc; 
+                        }
+
+                        .fav-btn{
+                          width: 30px;
+                           height: 25px;
+                  border-radius: 100px;
+                  position: absolute;
+                  z-index: 1;
+                  top: 40px;
+                  right: 11px;
+                  /* border: 1px solid rgba(255, 255, 255, 0.4); */
+                  border: none;
+                  background: rgba(249, 249, 249, 0.6);
+                  
+                  justify-content: center;
+                   align-items: center;
+                   color: red; 
+                        }
+
+                        .fav-btn:hover{
+                          width: 30px;
+                           height: 25px;
+                        border-radius: 100px;
+                         position: absolute;
+                           z-index: 1;
+                         top: 40px;
+                         right: 11px;
+                         /* border: 1px solid rgba(255, 255, 255, 0.4); */
+                        border: none;
+                        background: red;
+                  
+                        justify-content: center;
+                         align-items: center;
+                         color: rgb(0, 0, 0); 
+                        }
+                      </style>
+                      <!-- --------- -->
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a3.png" />
+                      <div class="select">
+                        <select name="cars" id="cars">
+                          <option value="A">A</option>
+                          <option value="B">B</option>
+                          <option value="C">C</option>
+                          <option value="D">D</option>
+                        </select>
+                      </div>
+                      <div class="title">The Century Oak</div>
+                    </div>
+                   
+                    
+                    <div class="outerImage">
+                      
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a1.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -200,7 +288,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?green" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a1.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -212,7 +306,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?sea" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a3.png" />
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -224,7 +324,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?office" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a5.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -236,7 +342,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?dog" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a2.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -248,7 +360,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?cat" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/BgLiveStreaming.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -260,7 +378,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?tree" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a6.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -272,7 +396,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?sky" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a5.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -284,7 +414,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?sea" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a4.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -296,19 +432,13 @@
                       <div class="title">The Century Oak</div>
                     </div>
                     <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?design" />
-                      <div class="select">
-                        <select name="cars" id="cars">
-                          <option value="A">A</option>
-                          <option value="B">B</option>
-                          <option value="C">C</option>
-                          <option value="D">D</option>
-                        </select>
-                      </div>
-                      <div class="title">The Century Oak</div>
-                    </div>
-                    <div class="outerImage">
-                      <img src="https://source.unsplash.com/featured/?woman" />
+                      <button class="editIcon">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                      </button>
+                      <button class="fav-btn">
+                        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <img src="/assets/a1.png" />
                       <div class="select">
                         <select name="cars" id="cars">
                           <option value="A">A</option>
@@ -327,9 +457,167 @@
                   role="tabpanel"
                   aria-labelledby="nav-profile-tab"
                 >
-                  <div class="addnew">
-                    <button>Add Collection</button>
+                <div class="addnew">
+                  <button id="openModalButton">Add Collection</button>
+              </div>
+              
+              <div class="modal" id="modal">
+                  <span class="close" id="closeModalButton">&times;</span>
+                  <h2>New Collection</h2>
+                  <label for="collection-name">Collection name</label>
+                  <input type="text" id="collection-name" value="CREATIVE COLLECTION">
+                  <h3>Arts</h3>
+                  <label for="arts">Add your Art</label>
+                 <input type="file" style="padding: 10px;">
+                 <div class="flexImg z">
+                  <div class="innerFlex" >
+                    <div><img src="/assets/404.svg" alt=""></div>
+                    <p>Collection Name</p>
                   </div>
+                  <div></div>
+                  <div class="innerFlex z" >
+                    <div><img src="/assets/404.svg" alt=""></div>
+                    <p>Collection Name</p>
+                  </div>
+                  <div></div>
+                  <div class="innerFlex z" >
+                    <div><img src="/assets/404.svg" alt=""></div>
+                    <p>Collection Name</p>
+                  </div>
+                  <div></div>
+                  <div class="innerFlex x" >
+                    <div><img src="/assets/404.svg" alt=""></div>
+                    <p>Collection Name</p>
+                  </div>
+                  <div></div>
+                  <div></div>
+                 </div>
+                 <style>
+                  .flexImg{
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    border: solid 1px;
+                    padding: 5px;
+                    padding-bottom: 5px;
+                  }
+                  .innerFlex{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-bottom: solid 1px;
+                  }
+                   .x{
+                    border: none;
+                  }
+                   .innerFlex p{
+                    position: relative;
+                    top: 10px;
+                    padding: 5px;
+                    
+                   }
+                   .innerFlex img{
+                    border-right: solid 1px;
+                    padding: 10px;
+                    width: 150px;
+                    
+                   }
+
+                  
+                 </style>
+                  <div class="buttons" style="padding-top: 9px;">
+                      <button class="cancel" id="cancelButton">Cancel</button>
+                      <button class="save">Save</button>
+                  </div>
+              </div>
+            <script>
+              const openModalButton = document.getElementById('openModalButton');
+              const closeModalButton = document.getElementById('closeModalButton');
+              const cancelButton = document.getElementById('cancelButton');
+              const modal = document.getElementById('modal');
+          
+              openModalButton.addEventListener('click', () => {
+                  modal.classList.add('show-modal');
+              });
+          
+              closeModalButton.addEventListener('click', () => {
+                  modal.classList.remove('show-modal');
+              });
+          
+              cancelButton.addEventListener('click', () => {
+                  modal.classList.remove('show-modal');
+              });
+          
+              window.addEventListener('click', (event) => {
+                  if (event.target === modal) {
+                      modal.classList.remove('show-modal');
+                  }
+              });
+          </script>
+   <style>
+    
+    .modal {
+      display: none; /* Initially hidden */
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 20px;
+            position: fixed;
+            top: 20px; /* Adjust top value as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            height: min-content;
+    }
+    .modal h2 {
+        margin: 0;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .modal .close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        font-size: 1.2em;
+    }
+    .modal label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .modal input[type="text"] {
+        width: calc(100% - 20px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+    .modal .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+    .modal .buttons button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    .modal .buttons .cancel {
+        background: white;
+        border: 1px solid #0b0;
+        color: #0b0;
+    }
+    .modal .buttons .save {
+        background: #0af;
+        color: white;
+    }
+    .show-modal {
+        display: block;
+    }
+</style>          
                   <div class="outerCollections">
                     <div class="outerCard">
                       <button class="delete">
@@ -666,3 +954,53 @@
   integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
   crossorigin="anonymous"
 ></script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+<button class="fav-btn">
+  <i class="fa-regular fa-heart" aria-hidden="true"></i>
+</button>
+<style>
+  .fav-btn {
+    display: block;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    padding: 5px;
+    border-radius: 15px;
+    top:298px;
+    right: 230px;
+    color: red;
+    z-index: 0;
+    height: 20px;
+    width: 50px;
+  }
+
+  .fav-btn:hover {
+    display: block;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    padding: 5px;
+    border-radius: 15px;
+    top: 298pxpx;
+    right: 230px;
+    color: red;
+    background-color: #ccc;
+    height: 20px;
+    width: 50px;
+  }
+</style> -->

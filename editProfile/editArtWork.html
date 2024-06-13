@@ -99,7 +99,7 @@
                   <label for="fname">Artist Name</label>
                 </div>
                 <div class="grid-65">
-                  <input type="text" id="fname" tabindex="1" />
+                  <input type="text" id="fname" tabindex="1" placeholder="Artist Name here"/>
                 </div>
               </fieldset>
               <!-- Type -->
@@ -173,6 +173,10 @@
                 </div>
               </fieldset>
               <fieldset>
+                <div class="grid-35"> <label for="List other artist">List other artist</label></div>
+               <div class="grid-65"> <input type="text" placeholder="Artist Name"> </div>
+              </fieldset>
+              <fieldset>
                 <div class="grid-35">
                   <label for="">Did you create this art piece?</label>
                 </div>
@@ -215,6 +219,7 @@
                     type="Artwork Dimensions"
                     id="position"
                     tabindex="11"
+                    placeholder="Enter Dimensions here"
                   />
                 </div>
               </fieldset>
@@ -224,7 +229,7 @@
                   <label for="Price">Price</label>
                 </div>
                 <div class="grid-65">
-                  <input type="text" id="Price" tabindex="12" />
+                  <input type="text" id="Price" tabindex="12" placeholder="Price $"/>
                 </div>
               </fieldset>
               <!-- Price After Discount -->
@@ -233,7 +238,7 @@
                   <label for="Price After Discount">Price After Discount</label>
                 </div>
                 <div class="grid-65">
-                  <input type="text" id="Price After Discount" tabindex="13" />
+                  <input type="text" id="Price After Discount" tabindex="13" placeholder="After Discount"/>
                 </div>
               </fieldset>
               <!--Quantity -->
@@ -242,7 +247,7 @@
                   <label for="Quantity">Quantity</label>
                 </div>
                 <div class="grid-65">
-                  <input type="text" id="Quantity" tabindex="13" />
+                  <input type="text" id="Quantity" tabindex="13" placeholder="Enter the Quantity" />
                 </div>
               </fieldset>
               <fieldset>
@@ -273,26 +278,62 @@
                   value=""
                 />
               </div>
-              <div class="wrapperImages">
-                <div class="outerImg">
-                  <img class="myImg" src="/assets/a1.png" alt="" />
-                  <button class="delete">
-                    <img cl src="/assets/Delete.svg" alt="" />
-                  </button>
+              
+          
+              <div class="container">
+                <div class="image-wrapper big">
+                    <img src="/assets/a1.png" alt="Big Image">
+                    <button class="delete-button">Delete</button>
                 </div>
-                <div class="outerImg">
-                  <img class="myImg" src="/assets/a1.png" alt="" />
-                  <button class="delete">
-                    <img cl src="/assets/Delete.svg" alt="" />
-                  </button>
+                <div class="image-wrapper">
+                    <img src="/assets/a1.png" alt="Image 1">
+                    <button class="delete-button">Delete</button>
                 </div>
-                <div class="outerImg">
-                  <img class="myImg" src="/assets/a1.png" alt="" />
-                  <button class="delete">
-                    <img cl src="/assets/Delete.svg" alt="" />
-                  </button>
+                <div class="image-wrapper">
+                    <img src="/assets/a1.png" alt="Image 2">
+                    <button class="delete-button">Delete</button>
                 </div>
-              </div>
+                <div class="image-wrapper">
+                    <img src="/assets/a1.png" alt="Image 3">
+                    <button class="delete-button">Delete</button>
+                </div>
+                <div class="image-wrapper">
+                    <img src="/assets/a1.png" alt="Image 4">
+                    <button class="delete-button">Delete</button>
+                </div>
+            </div>
+            <style>
+                .container {
+                  padding-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+        .image-wrapper {
+            position: relative;
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: auto;
+        }
+        .image-wrapper .delete-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 100px;
+            font-weight: lighter;
+        }
+        .big {
+            grid-column: span 2;
+        }
+               
+            </style>
+              
             </div>
           </form>
         </div>
