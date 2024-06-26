@@ -65,6 +65,7 @@ nav {
   z-index: 99;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 nav .logo img {
   width: 185px;
@@ -76,16 +77,18 @@ nav ul {
   flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
-  width: 80%;
+  width: 78%;
   margin: 0 !important;
 }
 nav ul .links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  
 }
 nav ul li {
   transition: 500ms;
-  margin: 0px 55px;
+  margin: 0px 45px;
 }
 nav ul li a {
   color: var(--secondary-color);
