@@ -17,48 +17,95 @@
     <title>ArtFeat</title>
 </head>
 <body>
-<nav>
-    <div class="logo">
-        <img src="/assets/logo.png" alt="Logo"/>
-    </div>
-    <input type="checkbox" id="click"/>
-    <label for="click" class="menu-btn">
+    <nav>
+        <div class="logo"> 
+          <!------- Logo ------->
+           <img src="/assets/logo.png">  
+        </div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
         <i class="fa fa-bars"></i>
-    </label>
-    <ul>
-        <div class="links">
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Artists</a></li>
-            <li><a href="#">Who we are</a></li>
-            <li><a href="#">I’m an Artist</a></li>
-        </div>
-        <div class="headerButtons">
-            <div class="innerContent">
-                <div class="signUp">
-                    <button class="button" type="submit" onclick="">Sign Up</button>
+        </label>
+        <ul>
+          <!------- Links ------->
+          <div class="links">
+           <li><a href="#">Gallery</a></li>
+           <li><a href="#">Artists</a></li>
+           <li><a href="#">Who we are</a></li>
+           <li><a href="#">Support Artist</a></li>
+           <li><a href="#"></a></li>
+          </div>
+          <div class="headerButtons">
+           <div class="transS">
+              <div class="signUp">
+                <div class="login">
+                  <button class="botton" type="submit">Login</button>
                 </div>
-                <div class="line"></div>
-                <button>
-                    <style>
-                      .hoverE:hover{
-                        background-color: aqua;
-                        border-radius: 30px;
-                        padding: 5px;
-                        transition: ease-out 50ms;
-                      }
-                    </style>
-                    <img src="/assets/Heart (1).svg" class="hoverE" />
-                  </button>
-                  <button>
-                    <img src="/assets/Profile.svg" class="hoverE"/>
-                  </button>
-                  <button>
-                    <img src="/assets/Cart.svg" class="hoverE"/>
-                  </button>
+                <div class="signup">
+                  <button class="botton" type="submit" onclick="">Sign Up</button>
+                </div>
+              </div>
             </div>
-        </div>
-    </ul>
-</nav>
+            <div class="innerContent">
+              <div class="line"></div>
+              <button>
+                <style>
+                  .hoverE:hover{
+                    background-color: aqua;
+                    border-radius: 30px;
+                    padding: 5px;
+                    transition: ease-out 50ms;
+                  }
+                </style>
+                <img src="/assets/Heart (1).svg" class="hoverE" />
+              </button>
+              <button>
+                <img src="/assets/Profile.svg" class="hoverE"/>
+              </button>
+              <button>
+                <img src="/assets/Cart.svg" class="hoverE"/>
+              </button>
+    
+              <!-- Language Select -->
+              <div class="nav-item dropdown mt-3">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span><i class="fa-solid fa-language"></i></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end border-0 rounded-0 rounded-bottom m-0" data-bs-popper="none">
+                    <div class="dropdown-item">
+                        <img src="/assets/united-states-of-america-flag-icon-32.png"> 
+                        <a href="#" style="text-decoration: none;" class="m-1">EN</a>
+                    </div>  
+                    <div class="dropdown-item">
+                        <img src="/assets/saudi-arabia-flag-icon-32.png"> 
+                        <a href="#" style="text-decoration: none;" class="m-1">AR</a>
+                    </div> 
+                </div>
+            </div>
+            
+            <div class="nav-item dropdown m-2">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img class="rounded-circle me-lg-2" src="/assets/user.jpg" alt="" style="width: 40px; height: 40px;">
+              </a>
+              <div class="dropdown-menu dropdown-menu-end border-0 rounded-0 rounded-bottom m-0" data-bs-popper="none">
+                  <div class="dropdown-item">
+                      <i class="fa-solid fa-user"></i>
+                      <a href="#" style="text-decoration: none;" class="m-1">My Profile</a>
+                  </div>  
+                  <div class="dropdown-item">
+                      <i class="fa-solid fa-gear"></i>
+                      <a href="#" style="text-decoration: none;" class="m-1">Settings</a>
+                  </div> 
+                  <div class="dropdown-item"> <i class="fa-solid fa-right-from-bracket"></i> <a href="#"  style="text-decoration: none;" class="m-1">Log Out</a></div> 
+                </div>
+                <style>
+                </style>
+            </div>
+              <!--  -->
+            </div>
+          </div>
+        </ul>
+      </nav>
 <div class="searchBar">
     <div class="inner">
         <div class="links">
